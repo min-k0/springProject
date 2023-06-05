@@ -37,7 +37,7 @@ public class ArticleController {
         Article saved = articleRepository.save(article);
         log.info(saved.toString());
 
-        return "";
+        return "redirect:/articles/" + saved.getId();
     }
 
     @GetMapping("/articles/{id}") // 해당 URL요청을 처리 선언
